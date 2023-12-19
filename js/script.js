@@ -1,5 +1,3 @@
-
-
 /*Scrivere un programma che chieda all’utente:
 - Il numero di chilometri da percorrere
 - Età del passeggero
@@ -21,3 +19,61 @@ bonus:
 - Usare una select per inserire l'età
 - Stampare sul biglietto un numero di carrozza e un numero di biglietto casuali
 Buon divertimento! */
+
+
+//1: fare due imput per chiedere nome e cognome, e un button. Richiamali nella pagina
+//2: fare p e richiamrli nella pagina
+//3: recuperare gli imput dell'user e metterli nella pagina
+//4: 
+
+
+
+
+
+
+console.log('JS OK');
+
+// recupero elemento in pagina
+const inputName = document.getElementById('input-name');
+const inputKms = document.getElementById('input-kms');
+const button = document.getElementById('button');
+
+const passengerName = document.getElementById('passenger-name')
+const passengerDiscount = document.getElementById('passenger-discount')
+const passengerSeat = document.getElementById('passenger-seat')
+const passengerCode = document.getElementById('passenger-code')
+const passengerPrice = document.getElementById('passenger-price')
+
+const underage = document.getElementById('underage')
+const adult = document.getElementById('adult')
+const senior = document.getElementById('senior')
+
+
+
+//
+button.addEventListener('click', function() {
+    //recupero il valore input nome
+    const Name = inputName.value.trim();
+    console.log(Name)
+    //recupero il valore input cognome
+    const Kms = inputKms.value.trim();
+    console.log(Kms)
+    //recupero il valore input age
+    const age = underage.value.trim();
+    console.log(age) 
+   
+
+
+
+
+    //inserisco nella p-name
+    passengerName.innerText = inputName.value;  
+
+    //inserisco nella p-discount
+    passengerDiscount.innerText = inputKms.value;  
+
+    //inserisco nella p-age
+    underage.innerText = underage.value;  
+
+});
+
